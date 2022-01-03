@@ -18,7 +18,7 @@ To extract chat logs with all users (note the empty quotes here):
 <br>or
 <br>python SkypeExportToText.py "" "C:\path\to\messages.json"
 
-The extracted chat logs are saved into a subfolder named "chats".
+The extracted chat logs are saved into a subfolder named "chats". The subfolder will be created where the Python script is located.
 <br>Each Skype chat or group chat log is saved into a separate file.
 <br>If there are previously existing files with same names then these colliding old files will be backed up with names in the form "chat username.txt.old".
 
