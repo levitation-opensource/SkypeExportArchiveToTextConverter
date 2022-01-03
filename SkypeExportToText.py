@@ -365,7 +365,6 @@ def format_skype_message(message):
 
   if (messagetype == "RichText" 
       or messagetype == "InviteFreeRelationshipChanged/Initialized"
-      # or messagetype == "RichText/Media_Card"
     ):
 
     content = re.sub(legacyquote_tag_re, skype_legacyquote_replacer, content)
