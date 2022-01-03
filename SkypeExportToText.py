@@ -735,7 +735,7 @@ if input_file == "" or username == "/?" or username == "help" or username == "/h
   safeprint("")
   safeprint("This software utility extracts chat logs into a human readable text format from Skype export archives.")
   safeprint("You can request a machine-readable archive export of your Skype chats from here: https://secure.skype.com/en/data-export")
-  safeprint("After downloading the archive, provide the filename of that archive to this utility in the form indicated below.")
+  safeprint("After downloading the archive, provide the filename of that archive to this utility in the form indicated below in order to obtain the chat log files in text format.")
   safeprint("")
   safeprint("Usage:")
   safeprint("")
