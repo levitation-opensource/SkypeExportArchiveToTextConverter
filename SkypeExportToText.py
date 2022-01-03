@@ -611,7 +611,7 @@ def format_skype_message(message):
   elif (
       messagetype == "ThreadActivity/HistoryDisclosedUpdate" 
       or messagetype == "ThreadActivity/JoiningEnabledUpdate" 
-      or messagetype == "ThreadActivity/RoleUpdate"
+      or messagetype == "ThreadActivity/RoleUpdate"   # TODO
     ):
 
     content = ""    # there does not appear to be any meaningful detail content in this message and I do not know what this message type indicates
@@ -727,10 +727,11 @@ def get_output_filename(username):
 
 # config
 
+# first argument is the python script name
 username = sys.argv[1] if len(sys.argv) >= 2 else ""
 input_file = sys.argv[2] if len(sys.argv) >= 3 else ""
 
-if input_file == "" or username == "/?" or username == "help" or username == "/help": # first argument is the python script name
+if input_file == "": 
 
   safeprint("")
   safeprint("")
