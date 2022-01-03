@@ -2,7 +2,7 @@
 
 This software utility extracts chat logs into a human readable text format from Skype export archives.
 <br>You can request a machine-readable archive export of your Skype chats from here: https://secure.skype.com/en/data-export
-<br>After downloading the archive, provide the filename of that archive to this utility in the form indicated below.
+<br>After downloading the archive, provide the filename of that archive to this utility in the form indicated below in order to obtain the chat log files in text format.
 
 Usage:
 
