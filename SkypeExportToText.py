@@ -379,7 +379,7 @@ def format_skype_message(message):
 
     type = messagetype.split("/")[1].replace("Media_", "")
 
-    links = re.findall(a_href_re, content)
+    links = re.findall(a_href_re, content)    # TODO: the links present in Skype export file seem to be invalid, so perhaps no point in showing them in the chat log?
     links = ", ".join([html.unescape(link) for link in links])
 
     originalnames = re.findall(originalname_re, content)
