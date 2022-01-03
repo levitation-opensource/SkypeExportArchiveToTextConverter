@@ -287,7 +287,7 @@ def remove_tags(text):
 
 
 # convert numeric timestamps inside legacy quotes into human readable format
-# "<quote author=\"roland\" authorname=\"Roland Pihlakas\" timestamp=\"1600529710\" conversation=\"8:roland\" messageid=\"1600529710240\" cuid=\"3464259921894677613\"><legacyquote>[1600529710] Roland Pihlakas: </legacyquote>..."
+# "<quote author=\"roland\" authorname=\"Roland Pihlakas\" timestamp=\"1600529710\" conversation=\"8:roland\" messageid=\"...\" cuid=\"...\"><legacyquote>[1600529710] Roland Pihlakas: </legacyquote>..."
 def skype_legacyquote_replacer(matches):
 
   timestamp = matches.group(1)
