@@ -178,13 +178,13 @@ def save_txt(filename, str, quiet = False, make_backup = False):
 #/ def save_txt(filename, data):
 
 
-# this function assumes that the time ends with Z, so not entire ISO format is supported, but only the particular format used by Skype export
 last_success_iso_time_parse_format_index = 0
 iso_time_formats = [
   "%Y-%m-%dT%H:%M:%S.%fZ",
   "%Y-%m-%dT%H:%M:%SZ"
 ]
 
+# this function assumes that the time ends with Z, so not entire ISO format is supported, but only the particular format used by Skype export
 def parse_iso_time(str):
   global last_success_iso_time_parse_format_index
 
