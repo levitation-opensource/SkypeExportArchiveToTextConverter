@@ -759,7 +759,7 @@ if input_file == "" or username == "/?" or username == "help" or username == "/h
   safeprint("")
   safeprint("Version 1.0.0")
   safeprint("Copyright: Roland Pihlakas, 2022, roland@simplify.ee")
-  safeprint("License: LGPL 2.1")
+  safeprint("Licence: LGPL 2.1")
   safeprint("You can obtain a copy of this free software from https://github.com/levitation-opensource/SkypeExportArchiveToTextConverter/")
   safeprint("")
   safeprint("")
