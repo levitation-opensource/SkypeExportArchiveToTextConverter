@@ -639,7 +639,7 @@ def export_chat(data, username, output_filename):
 
 
   conversations = data["conversations"]
-  selected_conversations = [conv for conv in conversations if parse_skype_username(conv["id"]) == username]     # split(): remove the prefix "8:"
+  selected_conversations = [conv for conv in conversations if parse_skype_username(conv["id"]) == username]
   if len(selected_conversations) == 0:
     safeprint("No conversations with username '%s' found" % username)
     sys.exit()
