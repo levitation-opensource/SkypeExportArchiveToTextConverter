@@ -663,6 +663,7 @@ def export_chat(data, username, output_filename):
 #/ def export_chat(data, username):
 
 
+# https://stackoverflow.com/questions/7406102/create-sane-safe-filename-from-any-unsafe-string
 # device names, '.', and '..' are invalid filenames in Windows.
 device_names = set("CON,PRN,AUX,NUL,COM1,COM2,COM3,COM4," \
                 "COM5,COM6,COM7,COM8,COM9,LPT1,LPT2," \
@@ -803,8 +804,8 @@ if username:
 else:   # all chats
   conversations = data["conversations"]
   usernames = list(set([parse_skype_username(conv["id"]) for conv in conversations]))
+  usernames.sort()  # make the colliding chat log filenames deterministic. It appears that the order of usernames in input data is changing
 
-usernames.sort()  # make the colliding chat log filenames deterministic. It appears that the order of usernames in input data is changing
 
 for index, username in enumerate(usernames):
   output_filename = get_output_filename(username)
