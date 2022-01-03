@@ -1,4 +1,4 @@
-# SkypeExportArchiveToTextConverter
+# Skype export archive to text converter
 
 This software utility extracts chat logs into a human readable text format from Skype export archives.
 <br>You can request a machine-readable archive export of your Skype chats from here: https://secure.skype.com/en/data-export
@@ -23,7 +23,7 @@ The extracted chat logs are saved into a subfolder named "chats".
 
 Copyright: Roland Pihlakas, 2022, roland@simplify.ee
 <br>License: LGPL 2.1
-<br>You can obtain a copy of this free software from https://github.com/levitation-opensource/
+<br>You can obtain a copy of this free software from https://github.com/levitation-opensource/SkypeExportArchiveToTextConverter/
 
 
 Note. The archive exported from Skype webpage will contain Skype chats starting from somewhere in the middle of year 2017.
