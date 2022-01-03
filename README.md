@@ -26,7 +26,7 @@ A Python 3 installation is required. There are no package dependencies for this 
 
 Version 1.0.0
 <br>Copyright: Roland Pihlakas, 2022, roland@simplify.ee
-<br>License: LGPL 2.1
+<br>Licence: LGPL 2.1
 <br>You can obtain a copy of this free software from https://github.com/levitation-opensource/SkypeExportArchiveToTextConverter/
 
 
