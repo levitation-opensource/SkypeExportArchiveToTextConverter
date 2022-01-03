@@ -40,4 +40,5 @@ Note. The archive exported from Skype webpage will contain Skype chats starting 
 <br>
 <br>
 <br>
-<br>[![Analytics](https://ga-beacon.appspot.com/UA-351728-28/SkypeExportArchiveToTextConverter/README.md?pixel)](https://github.com/igrigorik/ga-beacon)    
+
+[![Analytics](https://ga-beacon.appspot.com/UA-351728-28/SkypeExportArchiveToTextConverter/README.md?pixel)](https://github.com/igrigorik/ga-beacon)    
