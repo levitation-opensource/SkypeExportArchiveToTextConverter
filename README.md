@@ -9,14 +9,14 @@ This software utility extracts chat logs into a human readable text format from 
 Usage:
 
 To extract a chat log with one particular user:
-<br>python SkypeExportToText.py "username" "export.tar"
+<br>python SkypeExportToText.py "username" "C:\path\to\export.tar"
 <br>or
-<br>python SkypeExportToText.py "username" "messages.json"
+<br>python SkypeExportToText.py "username" "C:\path\to\messages.json"
 
 To extract chat logs with all users (note the empty quotes here):
-<br>python SkypeExportToText.py "" "export.tar"
+<br>python SkypeExportToText.py "" "C:\path\to\export.tar"
 <br>or
-<br>python SkypeExportToText.py "" "messages.json"
+<br>python SkypeExportToText.py "" "C:\path\to\messages.json"
 
 The extracted chat logs are saved into a subfolder named "chats".
 <br>Each Skype chat or group chat log is saved into a separate file.
