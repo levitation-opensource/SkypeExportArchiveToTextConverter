@@ -35,3 +35,6 @@ Note. The archive exported from Skype webpage will contain Skype chats starting 
 <br>https://suurjaak.github.io/Skyperious/
 <br>https://www.nirsoft.net/utils/skype_log_view.html
 <br>https://www.bitrecover.com/free/skype-chat-viewer/
+
+
+[![Analytics](https://ga-beacon.appspot.com/UA-351728-28/SkypeExportArchiveToTextConverter/README.md?pixel)](https://github.com/igrigorik/ga-beacon)    
