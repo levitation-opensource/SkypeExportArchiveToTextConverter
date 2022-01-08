@@ -26,7 +26,7 @@ The extracted chat logs are saved into a subfolder named "chats". The subfolder 
 A Python 3 installation is required. There are no package dependencies for this software.
 
 
-Version 1.0.0
+Version 1.0.5
 <br>Copyright: Roland Pihlakas, 2022, roland@simplify.ee
 <br>Licence: LGPL 2.1
 <br>You can obtain a copy of this free software from https://github.com/levitation-opensource/SkypeExportArchiveToTextConverter/
