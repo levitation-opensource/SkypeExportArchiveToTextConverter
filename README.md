@@ -31,6 +31,8 @@ Version 1.0.5
 <br>Licence: LGPL 2.1
 <br>You can obtain a copy of this free software from https://github.com/levitation-opensource/SkypeExportArchiveToTextConverter/
 
+Alternative software for parsing Skype export achives:
+<br>https://go.skype.com/skype-parser
 
 Note. The archive exported from Skype webpage will contain Skype chats starting from somewhere in the middle of year 2017.
 <br>For exporting archives of older Skype chats there are various alternative software available. For example:
