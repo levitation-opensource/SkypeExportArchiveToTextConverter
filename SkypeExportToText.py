@@ -449,6 +449,8 @@ def format_skype_message(message):
 
     elif messagetype == "Event/Call":
 
+      # TODO: extract call duration on call type="ended" event
+
       event_type = re.findall(call_event_type_re, content)[0]
       names = re.findall(name_tag_re, content)
       names = ", ".join([html.unescape(remove_tags(name)) for name in names])
@@ -853,7 +855,7 @@ if input_file == "":
   safeprint('')
   safeprint('')
   safeprint('Alternative software for parsing Skype export achives:')
-  safeprint('https://go.skype.com/skype-parser')
+  safeprint('https://go.skype.com/skype-parser (it does not generate text files and does less comprehensive parsing of the messages)')
   safeprint('')
   safeprint('')
   safeprint('Note. The archive exported from Skype webpage will contain Skype chats starting from somewhere in the middle of year 2017.')
