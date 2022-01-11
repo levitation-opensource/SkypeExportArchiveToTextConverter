@@ -856,6 +856,7 @@ if input_file == "":
   safeprint('')
   safeprint('Alternative software for parsing Skype export achives:')
   safeprint('https://go.skype.com/skype-parser (it does not generate text files and does less comprehensive parsing of the messages)')
+  safeprint('https://jimmysie.com/2021/08/13/saving-skype-media-files-from-exported-archive/ (for exporting media files into a more useful file structure)')
   safeprint('')
   safeprint('')
   safeprint('Note. The archive exported from Skype webpage will contain Skype chats starting from somewhere in the middle of year 2017.')
