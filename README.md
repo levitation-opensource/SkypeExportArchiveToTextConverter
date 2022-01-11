@@ -33,6 +33,7 @@ Version 1.0.5
 
 Alternative software for parsing Skype export achives:
 <br>https://go.skype.com/skype-parser (it does not generate text files and does less comprehensive parsing of the messages)
+<br>https://jimmysie.com/2021/08/13/saving-skype-media-files-from-exported-archive/ (for exporting media files into a more useful file structure)
 
 Note. The archive exported from Skype webpage will contain Skype chats starting from somewhere in the middle of year 2017.
 <br>For exporting archives of older Skype chats there are various alternative software available. For example:
