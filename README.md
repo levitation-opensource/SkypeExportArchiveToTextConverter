@@ -1,4 +1,4 @@
-# Skype export archive to text converter
+### Skype export archive to text converter
 
 Scrolling the Skype chats is painfully slow. There is no way to annotate or bookmark text in the chats for future reference. And searching over multiple chats is impossible as well. It would be much more convenient to have the Skype chat histories available as text files. This enables quick scrolling and search. If annotation or bookmarking is needed, you can further copy these text files to Google Docs, for example.
 
@@ -6,7 +6,7 @@ This software utility extracts chat logs into a human readable text format from 
 <br>You can request a machine-readable archive export of your Skype chats from here: https://secure.skype.com/en/data-export
 <br>After downloading the archive, provide the filename of that archive to this utility in the form indicated below in order to obtain the chat log files in text format.
 
-Usage:
+### Usage:
 
 To extract a chat log with one particular user:
 <br>python SkypeExportToText.py "username" "C:\path\to\export.tar"
@@ -40,6 +40,9 @@ Note. The archive exported from Skype webpage will contain Skype chats starting 
 <br>https://suurjaak.github.io/Skyperious/
 <br>https://www.nirsoft.net/utils/skype_log_view.html
 <br>https://www.bitrecover.com/free/skype-chat-viewer/
+
+### State
+Ready to use. Maintained and in active use.
 
 <br>
 <br>
