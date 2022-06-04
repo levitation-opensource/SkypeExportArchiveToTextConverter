@@ -7,6 +7,9 @@
 #
 # Version 1.0.5
 # 
+# Roland Pihlakas licenses this file to you under the GNU Lesser General Public License, ver 2.1.
+# See the LICENSE file for more information.
+#
 
 
 import os
@@ -808,7 +811,7 @@ def get_output_filename(username):
     result += " (" + str(username_count) + ")"
 
 
-  result = r"chats\\" + result + ".txt"
+  result = os.path.join("chats", result + ".txt")
   return result
 
 #/ def get_output_filename(username):
@@ -869,7 +872,7 @@ if input_file == "":
 
   sys.exit()
 
-#/ if len(sys.argv) < 3:
+#/ if input_file == "":
 
 
 output_time_format = r"%Y.%m.%d %H:%M:%S %Z"
