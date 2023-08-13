@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
 
 #
-# Author: Roland Pihlakas, 2022
+# Author: Roland Pihlakas, 2022 - 2023
 #
 # roland@simplify.ee
 #
-# Version 1.0.5
+# Version 1.0.6
 # 
 # Roland Pihlakas licenses this file to you under the GNU Lesser General Public License, ver 2.1.
 # See the LICENSE file for more information.
@@ -851,8 +851,8 @@ if input_file == "":
   safeprint('A Python 3 installation is required. There are no package dependencies for this software.')
   safeprint('')
   safeprint('')
-  safeprint('Version 1.0.5')
-  safeprint('Copyright: Roland Pihlakas, 2022, roland@simplify.ee')
+  safeprint('Version 1.0.6')
+  safeprint('Copyright: Roland Pihlakas, 2022 - 2023, roland@simplify.ee')
   safeprint('Licence: LGPL 2.1')
   safeprint('You can obtain a copy of this free software from https://github.com/levitation-opensource/SkypeExportArchiveToTextConverter/')
   safeprint('')
