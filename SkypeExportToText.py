@@ -760,7 +760,7 @@ def export_chat(data, username, output_filename):
 device_names = set("CON,PRN,AUX,NUL,COM1,COM2,COM3,COM4," \
                 "COM5,COM6,COM7,COM8,COM9,LPT1,LPT2," \
                 "LPT3,LPT4,LPT5,LPT6,LPT7,LPT8,LPT9," \
-                "CONIN$,CONOUT$,..,.".split())
+                "CONIN$,CONOUT$,..,.".split(","))
 
 def sanitise_filename(text, max_len=255, keep_ext=True, replace_device_names=True, check_filename_start_and_end=True):   # 255: # Maximum length of filename is 255 bytes in Windows and some *nix flavors.
   
