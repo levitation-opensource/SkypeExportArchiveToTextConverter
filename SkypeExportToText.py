@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
 
 #
-# Author: Roland Pihlakas, 2022 - 2023
+# Author: Roland Pihlakas, 2022 - 2024
 #
 # roland@simplify.ee
 #
-# Version 1.0.6
+# Version 1.0.7
 # 
 # Roland Pihlakas licenses this file to you under the GNU Lesser General Public License, ver 2.1.
 # See the LICENSE file for more information.
@@ -25,6 +25,9 @@ import codecs
 
 
 BOM = codecs.BOM_UTF8
+
+
+sentinel = object() # https://web.archive.org/web/20200221224620id_/http://effbot.org/zone/default-values.htm
 
 
 def safeprint(text):
@@ -119,7 +122,11 @@ def rename_temp_file(filename, make_backup = False):  # NB! make_backup is false
 #/ def rename_temp_file(filename):
 
 
-def read_json(jsonfilename, tarfilename=None, default_data = {}, quiet = False):
+def read_json(jsonfilename, tarfilename=None, default_data = sentinel, quiet = False):
+
+  # https://web.archive.org/web/20200221224620id_/http://effbot.org/zone/default-values.htm
+  if default_data is sentinel:
+    default_data = {}
 
   if tarfilename:
     if not os.path.exists(tarfilename):
@@ -160,7 +167,7 @@ def read_json(jsonfilename, tarfilename=None, default_data = {}, quiet = False):
 
   return data
 
-#/ def read_json(jsonfilename, tarfilename=None, default_data = {}, quiet = False):
+#/ def read_json(jsonfilename, tarfilename=None, default_data = sentinel, quiet = False):
 
 
 def save_txt(filename, str, quiet = False, make_backup = False):
@@ -291,6 +298,19 @@ def remove_tags(text):
 #/ def remove_tags(text):
 
 
+def format_time(timestamp):
+
+  timestamp = datetime.datetime.strftime(convert_timezone(timestamp), output_time_format)
+
+  # It has happened that +00:00 has been appended to UTC spuriously, resulting in UTC+00:00. No idea how that is possible
+  if timestamp.endswith("UTC+00:00") or timestamp.endswith("UTC-00:00"):
+    timestamp = timestamp[:-6]  # remove +-00:00
+
+  return timestamp
+
+#/ def format_time(timestamp):
+
+
 # convert numeric timestamps inside legacy quotes into human readable format
 # "<quote author=\"roland\" authorname=\"Roland Pihlakas\" timestamp=\"1600529710\" conversation=\"8:roland\" messageid=\"...\" cuid=\"...\"><legacyquote>[1600529710] Roland Pihlakas: </legacyquote>..."
 def skype_legacyquote_replacer(matches):
@@ -300,7 +320,7 @@ def skype_legacyquote_replacer(matches):
   
   try:
     timestamp = datetime.datetime.fromtimestamp(int(timestamp))   # NB! no division by 1000 here
-    timestamp = datetime.datetime.strftime(convert_timezone(timestamp), output_time_format)
+    timestamp = format_time(timestamp)
   except ValueError:  # non-numeric timestamp: '<legacyquote>[12:35:59] sys: </legacyquote>'
     pass
 
@@ -357,14 +377,14 @@ def format_skype_message(message):
       name = "(" + username + ")"
 
 
-    time = datetime.datetime.strftime(convert_timezone(message["time"]), output_time_format)
+    time = format_time(message["time"])
 
     edittime = message["edittime"]
     if edittime:
-      edittime = datetime.datetime.strftime(convert_timezone(edittime), output_time_format)
+      edittime = format_time(edittime)
 
     deletetime = message["deletetime"]
-    if deletetime:
+    if deletetime:    # TODO: option to log deleted messages?
       return ""
 
 
@@ -851,8 +871,8 @@ if input_file == "":
   safeprint('A Python 3 installation is required. There are no package dependencies for this software.')
   safeprint('')
   safeprint('')
-  safeprint('Version 1.0.6')
-  safeprint('Copyright: Roland Pihlakas, 2022 - 2023, roland@simplify.ee')
+  safeprint('Version 1.0.7')
+  safeprint('Copyright: Roland Pihlakas, 2022 - 2024, roland@simplify.ee')
   safeprint('Licence: LGPL 2.1')
   safeprint('You can obtain a copy of this free software from https://github.com/levitation-opensource/SkypeExportArchiveToTextConverter/')
   safeprint('')
